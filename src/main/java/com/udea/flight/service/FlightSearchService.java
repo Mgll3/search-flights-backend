@@ -2,7 +2,6 @@ package com.udea.flight.service;
 
 import com.udea.flight.domain.dto.FlightSearchDTO;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 

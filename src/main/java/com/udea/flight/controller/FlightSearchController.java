@@ -15,8 +15,11 @@ import java.util.List;
 @RequestMapping("/flights/v1")
 public class FlightSearchController {
 
-    @Autowired
-    private FlightSearchService flightSearchService;
+    private final FlightSearchService flightSearchService;
+
+    public FlightSearchController(FlightSearchService flightSearchService) {
+        this.flightSearchService = flightSearchService;
+    }
 
     @GetMapping("/searchByDepartureDate")
     public List<FlightSearchDTO> searchFlightsByDepartureDate(@RequestParam String originCity, @RequestParam String destinationCity, @RequestParam LocalDate departureDate) {

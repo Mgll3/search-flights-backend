@@ -5,6 +5,11 @@ import com.udea.flight.domain.model.User;
 
 public class UserMapper {
 
+    // Private constructor
+    private UserMapper() {
+        // Prevent instantiation
+    }
+
     public static UserDTO mapToUserDTO(User user) {
         UserDTO userDTO = new UserDTO();
         userDTO.setUserId(user.getUserId());

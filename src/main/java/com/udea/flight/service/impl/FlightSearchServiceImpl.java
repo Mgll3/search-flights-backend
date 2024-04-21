@@ -27,7 +27,7 @@ public class FlightSearchServiceImpl implements FlightSearchService {
         List<FlightSearch> flights = flightSearchRepository.findFlightsByDepartureDate(originCity, destinationCity, departureDate);
         return flights.stream()
                 .map(FlightSearchMapper::mapToFlightSearchDTO)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
@@ -35,7 +35,7 @@ public class FlightSearchServiceImpl implements FlightSearchService {
         List<FlightSearch> flights = flightSearchRepository.findFlightsByDepartureAndArrivalDate(originCity, destinationCity, departureDate, arrivalDate);
         return flights.stream()
                 .map(FlightSearchMapper::mapToFlightSearchDTO)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
@@ -43,7 +43,7 @@ public class FlightSearchServiceImpl implements FlightSearchService {
         List<FlightSearch> flights = flightSearchRepository.findFlightsByOriginAndDestination(originCity, destinationCity);
         return flights.stream()
                 .map(FlightSearchMapper::mapToFlightSearchDTO)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
@@ -51,7 +51,7 @@ public class FlightSearchServiceImpl implements FlightSearchService {
         List<FlightSearch> flights = flightSearchRepository.findFlightsByPrice(price);
         return flights.stream()
                 .map(FlightSearchMapper::mapToFlightSearchDTO)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
@@ -63,6 +63,6 @@ public class FlightSearchServiceImpl implements FlightSearchService {
         List<FlightSearch> flights = flightSearchRepository.findFlightsByNumberOfPeople(numberOfPeople);
         return flights.stream()
                 .map(FlightSearchMapper::mapToFlightSearchDTO)
-                .collect(Collectors.toList());
+                .toList();
     }
 }
