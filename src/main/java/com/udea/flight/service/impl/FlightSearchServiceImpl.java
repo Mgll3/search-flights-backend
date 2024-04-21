@@ -8,10 +8,9 @@ import com.udea.flight.service.FlightSearchService;
 import com.udea.flight.util.exception.CustomIllegalArgumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 @Service
 public class FlightSearchServiceImpl implements FlightSearchService {

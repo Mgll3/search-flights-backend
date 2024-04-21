@@ -2,7 +2,6 @@ package com.udea.flight.controller;
 
 import com.udea.flight.domain.dto.FlightSearchDTO;
 import com.udea.flight.service.FlightSearchService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
