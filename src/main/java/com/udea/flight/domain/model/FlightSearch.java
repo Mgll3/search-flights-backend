@@ -23,10 +23,10 @@ public class FlightSearch {
     private Long flightId;
 
     @Column(name ="departure_date", nullable = false)
-    private LocalDate departureDate;
+    private String departureDate;
 
     @Column(name ="arrival_date")
-    private LocalDate arrivalDate;
+    private String arrivalDate;
 
     @Column(name = "origin_city", nullable = false)
     private String originCity;

@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface FlightSearchService {
 
-    List<FlightSearchDTO> searchFlightsByDepartureDate(String originCity, String destinationCity, LocalDate departureDate);
+    List<FlightSearchDTO> searchFlightsByDepartureDate(String originCity, String destinationCity, String departureDate);
 
-    List<FlightSearchDTO> searchFlightsByDepartureAndArrivalDate(String originCity, String destinationCity, LocalDate departureDate, LocalDate arrivalDate);
+    List<FlightSearchDTO> searchFlightsByDepartureAndArrivalDate(String originCity, String destinationCity, String departureDate, String arrivalDate);
 
     List<FlightSearchDTO> searchFlightsByOriginAndDestination(String originCity, String destinationCity);
 

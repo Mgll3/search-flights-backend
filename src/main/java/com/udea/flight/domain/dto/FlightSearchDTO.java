@@ -14,8 +14,8 @@ import java.time.LocalDate;
 public class FlightSearchDTO {
 
     private Long flightId;
-    private LocalDate departureDate;
-    private LocalDate arrivalDate;
+    private String departureDate;
+    private String arrivalDate;
     private String originCity;
     private String destinationCity;
     private Double price;

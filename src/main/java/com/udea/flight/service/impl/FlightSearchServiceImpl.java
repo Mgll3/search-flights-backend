@@ -22,7 +22,7 @@ public class FlightSearchServiceImpl implements FlightSearchService {
     }
 
     @Override
-    public List<FlightSearchDTO> searchFlightsByDepartureDate(String originCity, String destinationCity, LocalDate departureDate) {
+    public List<FlightSearchDTO> searchFlightsByDepartureDate(String originCity, String destinationCity, String departureDate) {
         List<FlightSearch> flights = flightSearchRepository.findFlightsByDepartureDate(originCity, destinationCity, departureDate);
         return flights.stream()
                 .map(FlightSearchMapper::mapToFlightSearchDTO)
@@ -30,7 +30,7 @@ public class FlightSearchServiceImpl implements FlightSearchService {
     }
 
     @Override
-    public List<FlightSearchDTO> searchFlightsByDepartureAndArrivalDate(String originCity, String destinationCity, LocalDate departureDate, LocalDate arrivalDate) {
+    public List<FlightSearchDTO> searchFlightsByDepartureAndArrivalDate(String originCity, String destinationCity, String departureDate, String arrivalDate) {
         List<FlightSearch> flights = flightSearchRepository.findFlightsByDepartureAndArrivalDate(originCity, destinationCity, departureDate, arrivalDate);
         return flights.stream()
                 .map(FlightSearchMapper::mapToFlightSearchDTO)

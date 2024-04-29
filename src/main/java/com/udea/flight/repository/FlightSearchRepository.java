@@ -13,10 +13,10 @@ import java.util.List;
 public interface FlightSearchRepository extends JpaRepository<FlightSearch, Long>{
 
     @Query(value = "SELECT * FROM Search_Flights WHERE origin_city = :originCity AND destination_city = :destinationCity AND departure_date = :departureDate", nativeQuery = true)
-    List<FlightSearch> findFlightsByDepartureDate(@Param("originCity") String originCity, @Param("destinationCity") String destinationCity, @Param("departureDate") LocalDate departureDate);
+    List<FlightSearch> findFlightsByDepartureDate(@Param("originCity") String originCity, @Param("destinationCity") String destinationCity, @Param("departureDate") String departureDate);
 
     @Query(value = "SELECT * FROM Search_Flights WHERE origin_city = :originCity AND destination_city = :destinationCity AND departure_date = :departureDate AND arrival_date = :arrivalDate", nativeQuery = true)
-    List<FlightSearch> findFlightsByDepartureAndArrivalDate(@Param("originCity") String originCity, @Param("destinationCity") String destinationCity, @Param("departureDate") LocalDate departureDate, @Param("arrivalDate") LocalDate arrivalDate);
+    List<FlightSearch> findFlightsByDepartureAndArrivalDate(@Param("originCity") String originCity, @Param("destinationCity") String destinationCity, @Param("departureDate") String departureDate, @Param("arrivalDate") String arrivalDate);
 
     @Query(value = "SELECT * FROM Search_Flights WHERE origin_city = :originCity AND destination_city = :destinationCity", nativeQuery = true)
     List<FlightSearch> findFlightsByOriginAndDestination(@Param("originCity") String originCity, @Param("destinationCity") String destinationCity);
@@ -26,4 +26,5 @@ public interface FlightSearchRepository extends JpaRepository<FlightSearch, Long
 
     @Query(value = "SELECT * FROM Search_Flights WHERE number_of_people = :numberOfPeople", nativeQuery = true)
     List<FlightSearch> findFlightsByNumberOfPeople(@Param("numberOfPeople") Integer numberOfPeople);
+
 }
