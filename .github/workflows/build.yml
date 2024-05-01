@@ -27,5 +27,5 @@ jobs:
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.organization=<mgll3>
-            -Dsonar.projectKey=<Mgll3_search-flights-backend>
+            -Dsonar.organization=mgll3
+            -Dsonar.projectKey=Mgll3_search-flights-backend
